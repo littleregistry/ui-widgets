@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Modal Widget - Vanilla JS Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+    }
+    .info {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Search Modal Widget - Vanilla JS Example</h1>
+  
+  <div class="info">
+    <p><strong>This is a demo of the compiled vanilla JavaScript widget.</strong></p>
+    <p>After building the project with <code>npm run build</code>, include the generated JavaScript file to use this widget on any webpage.</p>
+  </div>
+
+  <!-- Container for the widget -->
+  <div id="search-modal-root"></div>
+
+  <!-- Include React dependencies from CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  
+  <!-- Include the compiled widget (after building) -->
+  <script src="./dist/search-modal.iife.js"></script>
+</body>
+</html>
