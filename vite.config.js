@@ -4,7 +4,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  build: {
+ build: {
     lib: {
       entry: resolve(__dirname, 'src/index.jsx'),
       name: 'SearchModal',
@@ -24,5 +24,8 @@ export default defineConfig({
   },
   css: {
     modules: false
-  }
+  },
+  define: {
+     'process.env': {}
+  },
 });
