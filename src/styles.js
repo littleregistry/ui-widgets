@@ -13,7 +13,7 @@ export const cssContent = `* {
 }
 
 .open-modal-btn {
-  background-color: #007bff;
+  background-color: #111;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -24,11 +24,11 @@ export const cssContent = `* {
 }
 
 .open-modal-btn:hover {
-  background-color: #0056b3;
+  background-color: #333;
 }
 
 .open-modal-btn:active {
-  background-color: #004085;
+  background-color: #333;
 }
 
 /* Modal Styles */
@@ -59,7 +59,8 @@ export const cssContent = `* {
   background-color: white;
   border-radius: 8px;
   padding: 24px;
-  max-width: 500px;
+  height: 400px;
+  max-width: 635px;
   width: 90%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   animation: slideIn 0.3s ease-out;

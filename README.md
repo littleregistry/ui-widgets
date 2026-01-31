@@ -43,7 +43,7 @@ npm run build
 
 This creates a `dist/` folder containing:
 
-- `search-modal.iife.js` - The compiled widget with **CSS inlined** (no separate CSS file needed!)
+- `search-modal.iife.js` - The compiled widget ready to use
 
 ## Usage
 
@@ -67,16 +67,16 @@ This creates a `dist/` folder containing:
 3. Add a container element:
 
 ```html
-<div id="search-modal-root"></div>
+<div id="__littleregistry__search-modal-root"></div>
 ```
 
-4. Include the compiled widget (CSS is automatically injected!):
+4. Include the compiled widget:
 
 ```html
 <script src="path/to/dist/search-modal.iife.js"></script>
 ```
 
-The widget will automatically initialize when the page loads and inject its styles into the page.
+The widget will automatically initialize when the page loads.
 
 ### Example
 
@@ -98,7 +98,7 @@ The search functionality logs to the console by default. You can extend the `han
 To customize the widget:
 
 1. Edit the components in `src/App.jsx`
-2. Modify styles in `src/styles.js`
+2. Modify styles in `src/App.css`
 3. Rebuild with `npm run build`
 
 ## Project Structure
@@ -107,7 +107,7 @@ To customize the widget:
 ui-widgets/
 ├── src/
 │   ├── App.jsx       # Main React component
-│   ├── styles.js     # CSS styles (inlined into bundle)
+│   ├── App.css       # Styles for the component
 │   └── index.jsx     # Entry point
 ├── dist/             # Compiled output (after build)
 ├── index.html        # Development demo page

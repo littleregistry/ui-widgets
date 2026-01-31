@@ -20,10 +20,10 @@ window.SearchModalWidget = {
   }
 };
 
-// Auto-initialize if there's a container with id 'search-modal-root'
+// Auto-initialize if there's a container with id '__littleregistry__search-modal-root'
 if (typeof document !== 'undefined') {
   document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('search-modal-root');
+    const container = document.getElementById('__littleregistry__search-modal-root');
     if (container) {
       const root = createRoot(container);
       root.render(<App />);

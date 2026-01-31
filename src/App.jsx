@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+const API_URL = process.env.NODE_ENV === "production" ? "https://widget.littleregistry.com" : "http://localhost:5173"
+
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -23,36 +25,23 @@ function App() {
   return (
     <div className="app">
       <button className="open-modal-btn" onClick={openModal}>
-        Open Search Modal
+        Find a registry
       </button>
 
       {isModalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <h2>Search</h2>
-              <button className="close-btn" onClick={closeModal}>
-                &times;
-              </button>
-            </div>
-            <form onSubmit={handleSubmit} className="search-form">
-              <input
-                type="text"
-                className="search-input"
-                placeholder="Type to search..."
-                value={searchQuery}
-                onChange={handleSearchChange}
-                autoFocus
-              />
-              <button type="submit" className="search-btn">
-                Search
-              </button>
-            </form>
-            {searchQuery && (
-              <div className="search-results">
-                <p>Searching for: {searchQuery}</p>
-              </div>
-            )}
+            <iframe src={`${API_URL}/search/?shopdomain=${encodeURIComponent(document.location.host)}&language=en`}
+            style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '0.5rem', // 8px
+                overflow: 'hidden',
+            }}
+            id="_little_registry-search-registry-container"
+            allow="clipboard-read *; clipboard-write *"
+            frameborder="0" border="0" cellspacing="0"
+            className="w-full h-full rounded-lg overflow-hidden"></iframe>
           </div>
         </div>
       )}
