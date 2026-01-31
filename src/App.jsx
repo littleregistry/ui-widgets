@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const API_URL = process.env.NODE_ENV === "production" ? "https://widget.littleregistry.com" : "http://localhost:5173"
+const API_URL = "https://widget.littleregistry.com"
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
